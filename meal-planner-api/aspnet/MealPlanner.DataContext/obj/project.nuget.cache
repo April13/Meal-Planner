@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jbEwhBr24qZe/lznHxVFRIqUo9xPAZsWGf/IUz8B6auJujhM/3LI4VAL7NE4saIdYWiY9wahebcd5Sk3pefKIw==",
+  "success": true,
+  "projectFilePath": "/Users/April/revature_staging/Meal-Planner/meal-planner-api/aspnet/MealPlanner.DataContext/MealPlanner.DataContext.csproj",
+  "expectedPackageFiles": [
+    "/Users/April/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/April/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
