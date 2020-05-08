@@ -10,11 +10,12 @@ import { UserComponent }            from '../../pages/user/user.component';
 import { TableComponent }           from '../../pages/table/table.component';
 import { TypographyComponent }      from '../../pages/typography/typography.component';
 import { IconsComponent }           from '../../pages/icons/icons.component';
-import { MapsComponent }            from '../../pages/maps/maps.component';
 import { NotificationsComponent }   from '../../pages/notifications/notifications.component';
-import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RecipeComponent } from 'app/modules/meal-planner/recipe/recipe.component';
+import { GroceryListComponent } from 'app/modules/meal-planner/grocery-list/grocery-list.component';
+import { CalendarComponent } from 'app/modules/meal-planner/calendar/calendar.component';
 
 @NgModule({
   imports: [
@@ -27,11 +28,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DashboardComponent,
     UserComponent,
     TableComponent,
-    UpgradeComponent,
     TypographyComponent,
     IconsComponent,
-    MapsComponent,
     NotificationsComponent,
+    RecipeComponent,
+    GroceryListComponent,
+    CalendarComponent,
   ]
 })
 

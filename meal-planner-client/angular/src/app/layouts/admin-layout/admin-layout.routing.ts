@@ -5,9 +5,10 @@ import { UserComponent } from '../../pages/user/user.component';
 import { TableComponent } from '../../pages/table/table.component';
 import { TypographyComponent } from '../../pages/typography/typography.component';
 import { IconsComponent } from '../../pages/icons/icons.component';
-import { MapsComponent } from '../../pages/maps/maps.component';
 import { NotificationsComponent } from '../../pages/notifications/notifications.component';
-import { UpgradeComponent } from '../../pages/upgrade/upgrade.component';
+import { GroceryListComponent } from 'app/modules/meal-planner/grocery-list/grocery-list.component';
+import { RecipeComponent } from 'app/modules/meal-planner/recipe/recipe.component';
+import { CalendarComponent } from 'app/modules/meal-planner/calendar/calendar.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -15,7 +16,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'table',          component: TableComponent },
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },
-    { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
-    { path: 'upgrade',        component: UpgradeComponent }
+    { path: 'calendar',       component: CalendarComponent },
+    { path: 'recipe',         component: RecipeComponent },
+    { path: 'grocery-list',   component: GroceryListComponent }
 ];
