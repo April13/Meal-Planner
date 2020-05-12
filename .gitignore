@@ -1,0 +1,16 @@
+# dotnet
+bin/
+obj/
+
+appsettings*
+!appsettings.json
+
+# macos
+.DS_Store
+
+# angular
+dist/
+tmp/
+
+# nodejs
+node_modules/
