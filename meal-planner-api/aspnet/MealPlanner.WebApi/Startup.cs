@@ -20,6 +20,7 @@ namespace MealPlanner.WebApi
 {
   public class Startup
   {
+    readonly string MyAllowSpecificOrigins = "CorsPolicy";
     public Startup(IConfiguration configuration)
     {
       Configuration = configuration;
@@ -58,7 +59,14 @@ namespace MealPlanner.WebApi
         );
 
       services.AddScoped<UnitOfWork>();
-
+      // CORS
+      services.AddCors(options => {
+        options.AddPolicy(
+          MyAllowSpecificOrigins,
+          builder => {
+            builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+          });
+      });
 
       services.AddMvc();
     }
@@ -85,6 +93,9 @@ namespace MealPlanner.WebApi
 
       app.UseRouting();
 
+      // CORS
+      app.UseCors(MyAllowSpecificOrigins);
+      
       app.UseAuthorization();
 
       app.UseEndpoints(endpoints =>

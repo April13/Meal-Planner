@@ -11,7 +11,7 @@ namespace MealPlanner.WebApi.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  [EnableCors()]
+  [EnableCors("CorsPolicy")]
   public class FoodController : ControllerBase
   {
     private UnitOfWork _unitOfWork;
@@ -82,7 +82,7 @@ namespace MealPlanner.WebApi.Controllers
       }
     }
 
-    [HttpPut("{id}")]
+    [HttpPut()]
     public async Task<IActionResult> Put([FromBody] FoodModel model)
     {
       // Validating Employee Name as it is required
