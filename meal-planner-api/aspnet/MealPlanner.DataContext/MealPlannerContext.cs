@@ -13,6 +13,8 @@ namespace MealPlanner.DataContext
     public DbSet<NutrientModel> Nutrients { get; set; }
     public DbSet<AmountModel> Amounts { get; set; }
     public DbSet<UnitModel> Units { get; set; }
+    public DbSet<DayModel> Days { get; set; }
+    public DbSet<EatModel> Eats { get; set; }
 
     public MealPlannerContext(DbContextOptions<MealPlannerContext> options) : base(options) 
     { }
@@ -27,6 +29,9 @@ namespace MealPlanner.DataContext
       modelBuilder.Entity<AmountModel>().HasKey(a => a.Id);
       modelBuilder.Entity<UnitModel>().HasKey(u => u.Id);
 
+      modelBuilder.Entity<DayModel>().HasKey(d => d.Id);
+      modelBuilder.Entity<EatModel>().HasKey(e => e.Id);
+
       // Set up Relationships
       modelBuilder.Entity<FoodModel>().HasOne(f => f.Nutrition).WithOne();
       modelBuilder.Entity<NutritionModel>().HasMany(n => n.Nutrients).WithOne().HasForeignKey(nu => nu.NutritionId);
@@ -35,6 +40,12 @@ namespace MealPlanner.DataContext
       modelBuilder.Entity<NutritionModel>().HasOne(n => n.UnitPerServing).WithOne();
       modelBuilder.Entity<NutrientModel>().HasOne(nu => nu.Amount).WithOne();
       modelBuilder.Entity<NutrientModel>().HasOne(nu => nu.Unit).WithOne();
+
+      modelBuilder.Entity<DayModel>().HasMany(d => d.Eats).WithOne().HasForeignKey(e => e.DayId);
+      modelBuilder.Entity<EatModel>().HasOne(e => e.Food).WithOne();
+      modelBuilder.Entity<EatModel>().HasOne(e => e.Servings).WithOne();;
+      
+
       /* Owned Entity Types?
       modelBuilder.Entity<FoodModel>().OwnsOne(f => f.Nutrition);
       modelBuilder.Entity<NutritionModel>().OwnsMany(n => n.Nutrients).WithOwner().HasForeignKey(nu => nu.NutritionId);

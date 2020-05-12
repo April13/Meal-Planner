@@ -15,6 +15,8 @@ namespace MealPlanner.DataContext.Repositories
     public virtual Repository<NutrientModel> Nutrient { get; set; }
     public virtual Repository<AmountModel> Amount { get; set; }
     public virtual Repository<UnitModel> Unit { get; set; }
+    public virtual Repository<DayModel> Day { get; set; }
+    public virtual Repository<EatModel> Eat { get; set; }
 
     public UnitOfWork(MealPlannerContext context)
     {
@@ -25,6 +27,8 @@ namespace MealPlanner.DataContext.Repositories
       Nutrient = new Repository<NutrientModel>(context);
       Amount = new Repository<AmountModel>(context);
       Unit = new Repository<UnitModel>(context);
+      Day = new Repository<DayModel>(context);
+      Eat = new Repository<EatModel>(context);
     }
 
     /// <summary>

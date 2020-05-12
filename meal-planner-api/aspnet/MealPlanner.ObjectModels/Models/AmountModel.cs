@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace MealPlanner.ObjectModels.Models
 {
   /// <summary>
-  /// Represents the _Rental_ model
+  /// Represents the _Amount_ model
   /// </summary>
   public class AmountModel : IValidatableObject
   {

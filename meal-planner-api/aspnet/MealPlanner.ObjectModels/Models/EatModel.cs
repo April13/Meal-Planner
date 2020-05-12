@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -5,23 +6,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MealPlanner.ObjectModels.Models
 {
   /// <summary>
-  /// Represents the _Food_ model (a food item)
+  /// Represents the _Eat_ model (serving(s) eaten of a food item)
   /// </summary>
-  public class FoodModel : IValidatableObject
+  public class EatModel : IValidatableObject
   {
     public int Id { get; set; }
 
-    public int AccountId { get; set; }
+    public int DayId { get; set; }
+    public int ServingsId { get; set; }
 
-    public string Name { get; set; }
+    [ForeignKey("ServingsId")]
+    public AmountModel Servings { get; set; }
 
-    public int NutritionId { get; set; }
+    public int FoodId { get; set; }
 
-    [ForeignKey("NutritionId")]
-    public NutritionModel Nutrition { get; set; }
+    [ForeignKey("FoodId")]
+    public FoodModel Food { get; set; }
 
     /// <summary>
-    /// Represents the _Food_ `Validate` method
+    /// Represents the _Eat_ `Validate` method
     /// </summary>
     /// <param name="validationContext"></param>
     /// <returns></returns>

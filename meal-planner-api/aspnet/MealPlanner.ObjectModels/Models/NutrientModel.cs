@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MealPlanner.ObjectModels.Models
 {
   /// <summary>
-  /// Represents the _Rental_ model
+  /// Represents the _Nutrient_ model (a nutrient on nutrition facts label)
   /// </summary>
   public class NutrientModel : IValidatableObject
   {
