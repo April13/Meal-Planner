@@ -1,0 +1,9 @@
+/Users/April/revature_staging/Meal-Planner/meal-planner-api/aspnet/MealPlanner.ObjectModels/obj/Debug/netstandard2.0/MealPlanner.ObjectModels.csprojAssemblyReference.cache
+/Users/April/revature_staging/Meal-Planner/meal-planner-api/aspnet/MealPlanner.ObjectModels/obj/Debug/netstandard2.0/MealPlanner.ObjectModels.csproj.CoreCompileInputs.cache
+/Users/April/revature_staging/Meal-Planner/meal-planner-api/aspnet/MealPlanner.ObjectModels/obj/Debug/netstandard2.0/MealPlanner.ObjectModels.AssemblyInfoInputs.cache
+/Users/April/revature_staging/Meal-Planner/meal-planner-api/aspnet/MealPlanner.ObjectModels/obj/Debug/netstandard2.0/MealPlanner.ObjectModels.AssemblyInfo.cs
+/Users/April/revature_staging/Meal-Planner/meal-planner-api/aspnet/MealPlanner.ObjectModels/bin/Debug/netstandard2.0/MealPlanner.ObjectModels.deps.json
+/Users/April/revature_staging/Meal-Planner/meal-planner-api/aspnet/MealPlanner.ObjectModels/bin/Debug/netstandard2.0/MealPlanner.ObjectModels.dll
+/Users/April/revature_staging/Meal-Planner/meal-planner-api/aspnet/MealPlanner.ObjectModels/bin/Debug/netstandard2.0/MealPlanner.ObjectModels.pdb
+/Users/April/revature_staging/Meal-Planner/meal-planner-api/aspnet/MealPlanner.ObjectModels/obj/Debug/netstandard2.0/MealPlanner.ObjectModels.dll
+/Users/April/revature_staging/Meal-Planner/meal-planner-api/aspnet/MealPlanner.ObjectModels/obj/Debug/netstandard2.0/MealPlanner.ObjectModels.pdb
