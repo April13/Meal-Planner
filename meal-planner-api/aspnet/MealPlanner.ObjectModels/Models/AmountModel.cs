@@ -6,16 +6,16 @@ namespace MealPlanner.ObjectModels.Models
   /// <summary>
   /// Represents the _Amount_ model
   /// </summary>
-  public class AmountModel : IValidatableObject
+  public class AmountModel : IValidatableObject//, IModel
   {
-    public int Id { get; set; }
+    // public int Id { get; set; }
     public int WholeNumber { get; set; }
     public int Numerator { get; set; }
     public int Denominator { get; set; }
 
 
     /// <summary>
-    /// Represents the _Nutrient_ `Validate` method
+    /// Represents the _Amount_ `Validate` method
     /// </summary>
     /// <param name="validationContext"></param>
     /// <returns></returns>

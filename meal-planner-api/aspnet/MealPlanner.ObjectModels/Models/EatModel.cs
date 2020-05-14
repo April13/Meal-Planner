@@ -8,14 +8,14 @@ namespace MealPlanner.ObjectModels.Models
   /// <summary>
   /// Represents the _Eat_ model (serving(s) eaten of a food item)
   /// </summary>
-  public class EatModel : IValidatableObject
+  public class EatModel : IValidatableObject//, IModel
   {
-    public int Id { get; set; }
+    // public int Id { get; set; }
 
-    public int DayId { get; set; }
-    public int ServingsId { get; set; }
+    // public int DayId { get; set; }
+    // public int ServingsId { get; set; }
 
-    [ForeignKey("ServingsId")]
+    // [ForeignKey("ServingsId")]
     public AmountModel Servings { get; set; }
 
     public int FoodId { get; set; }

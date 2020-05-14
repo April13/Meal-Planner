@@ -7,20 +7,17 @@ namespace MealPlanner.ObjectModels.Models
   /// <summary>
   /// Represents the _Nutrition_ model (a nutrition facts label)
   /// </summary>
-  public class NutritionModel : IValidatableObject
+  public class NutritionModel : IValidatableObject//, IModel
   {
-    public int Id { get; set; }
-    public int ServingSizeId { get; set; }
-    public int AmountPerServingId { get; set; }
-    public int UnitPerServingId { get; set; }
+    // public int Id { get; set; }
+    // public int ServingSizeId { get; set; }
+    // public int AmountPerServingId { get; set; }
+
     public int CaloriesPerServing { get; set; }
+    public decimal ServingsPerContainer { get; set; }
     
-    [ForeignKey("ServingSizeId")]
-    public AmountModel ServingSize { get; set; }
-    [ForeignKey("AmountPerServingId")]
-    public AmountModel AmountPerServing { get; set; }
-    [ForeignKey("UnitPerServingId")]
-    public UnitModel UnitPerServing { get; set; }
+    public List<ServingSizeModel> ServingSizes { get; set; }
+
     public List<NutrientModel> Nutrients { get; set; }
 
     /// <summary>

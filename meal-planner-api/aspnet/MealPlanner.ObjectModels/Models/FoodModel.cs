@@ -7,7 +7,7 @@ namespace MealPlanner.ObjectModels.Models
   /// <summary>
   /// Represents the _Food_ model (a food item)
   /// </summary>
-  public class FoodModel : IValidatableObject
+  public class FoodModel : IValidatableObject, IModel
   {
     public int Id { get; set; }
 
@@ -15,9 +15,9 @@ namespace MealPlanner.ObjectModels.Models
 
     public string Name { get; set; }
 
-    public int NutritionId { get; set; }
+    // public int NutritionId { get; set; }
 
-    [ForeignKey("NutritionId")]
+    // [ForeignKey("NutritionId")]
     public NutritionModel Nutrition { get; set; }
 
     /// <summary>
