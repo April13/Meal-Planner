@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -5,20 +6,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MealPlanner.ObjectModels.Models
 {
   /// <summary>
-  /// Represents the _Food_ model (a food item of an accounter/user)
+  /// Represents the _Account_ model (a user account)
   /// </summary>
-  public class FoodModel : IValidatableObject, IModel
+  public class AccountModel : IValidatableObject, IModel
   {
     public int Id { get; set; }
-
-    public int AccountId { get; set; }
-
     public string Name { get; set; }
-
-    public NutritionModel Nutrition { get; set; }
+    [DataType(DataType.EmailAddress)]
+    public string Email { get; set; }
+    [DataType(DataType.Password)]
+    public string Password { get; set; }
 
     /// <summary>
-    /// Represents the _Food_ `Validate` method
+    /// Represents the _Account_ `Validate` method
     /// </summary>
     /// <param name="validationContext"></param>
     /// <returns></returns>

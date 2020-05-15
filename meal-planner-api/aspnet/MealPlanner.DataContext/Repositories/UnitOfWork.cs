@@ -9,26 +9,20 @@ namespace MealPlanner.DataContext.Repositories
   public class UnitOfWork
   {
     private readonly MealPlannerContext _context;
-
+    public virtual Repository<AccountModel> Account { get; set; }
     public virtual Repository<FoodModel> Food { get; }
-    // public virtual Repository<NutritionModel> Nutrition { get; set; }
-    // public virtual Repository<NutrientModel> Nutrient { get; set; }
-    // public virtual Repository<AmountModel> Amount { get; set; }
     public virtual Repository<UnitModel> Unit { get; set; }
     public virtual Repository<DayModel> Day { get; set; }
-    // public virtual Repository<EatModel> Eat { get; set; }
+    public virtual Repository<NutrientTypeModel> NutrientType { get; set; }
 
     public UnitOfWork(MealPlannerContext context)
     {
       _context = context;
-
+      Account = new Repository<AccountModel>(context);
       Food = new Repository<FoodModel>(context);
-      // Nutrition = new Repository<NutritionModel>(context);
-      // Nutrient = new Repository<NutrientModel>(context);
-      // Amount = new Repository<AmountModel>(context);
       Unit = new Repository<UnitModel>(context);
       Day = new Repository<DayModel>(context);
-      // Eat = new Repository<EatModel>(context);
+      NutrientType = new Repository<NutrientTypeModel>(context);
     }
 
     /// <summary>

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MealPlanner.ObjectModels.Models
 {
   /// <summary>
-  /// Represents the _Day_ model (what is eaten in a day)
+  /// Represents the _Day_ model (what is eaten in a day for an account/user)
   /// </summary>
   public class DayModel : IValidatableObject, IModel
   {

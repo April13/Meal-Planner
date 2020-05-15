@@ -9,10 +9,9 @@ namespace MealPlanner.ObjectModels.Models
   /// </summary>
   public class ServingSizeModel : IValidatableObject//, IModel
   {
-    public int UnitPerServingId { get; set; }
+    public int? UnitPerServingId { get; set; }
+    public string ItemName { get; set; }
     public AmountModel ServingSize { get; set; }
-    // [ForeignKey("UnitPerServingId")]
-    // public UnitModel UnitOfServingSize { get; set; }
 
 
     /// <summary>

@@ -9,11 +9,8 @@ namespace MealPlanner.ObjectModels.Models
   /// </summary>
   public class NutritionModel : IValidatableObject//, IModel
   {
-    // public int Id { get; set; }
-    // public int ServingSizeId { get; set; }
-    // public int AmountPerServingId { get; set; }
-
     public int CaloriesPerServing { get; set; }
+    
     public decimal ServingsPerContainer { get; set; }
     
     public List<ServingSizeModel> ServingSizes { get; set; }

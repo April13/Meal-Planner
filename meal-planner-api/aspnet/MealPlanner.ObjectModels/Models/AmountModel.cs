@@ -4,14 +4,13 @@ using System.ComponentModel.DataAnnotations;
 namespace MealPlanner.ObjectModels.Models
 {
   /// <summary>
-  /// Represents the _Amount_ model
+  /// Represents the _Amount_ model (for whole numbers and fractions)
   /// </summary>
-  public class AmountModel : IValidatableObject//, IModel
+  public class AmountModel : IValidatableObject
   {
-    // public int Id { get; set; }
-    public int WholeNumber { get; set; }
-    public int Numerator { get; set; }
-    public int Denominator { get; set; }
+    public int? WholeNumber { get; set; }
+    public int? Numerator { get; set; }
+    public int? Denominator { get; set; }
 
 
     /// <summary>

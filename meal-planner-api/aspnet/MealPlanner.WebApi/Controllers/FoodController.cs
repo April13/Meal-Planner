@@ -35,6 +35,21 @@ namespace MealPlanner.WebApi.Controllers
       }
     }
 
+    [HttpGet("user/{id}")]
+    public IActionResult GetByAccountId(int id)
+    {
+      try
+      {
+        List<FoodModel> model = this._unitOfWork.Food._db.Where(f => f.AccountId.Equals(id)).ToList();
+
+        return base.Ok(model);
+      }
+      catch (Exception ex)
+      {
+        return base.BadRequest($"Error while getting all the Foods for Account #{id}! {ex.ToString()}");
+      }
+    }
+
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(int id)
     {

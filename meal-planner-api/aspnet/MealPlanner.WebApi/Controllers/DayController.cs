@@ -35,6 +35,21 @@ namespace MealPlanner.WebApi.Controllers
       }
     }
 
+    [HttpGet("account/{id}")]
+    public IActionResult GetByAccountId(int id)
+    {
+      try
+      {
+        List<DayModel> model = this._unitOfWork.Day._db.Where(d => d.AccountId.Equals(id)).ToList();
+
+        return base.Ok(model);
+      }
+      catch (Exception ex)
+      {
+        return base.BadRequest($"Error while getting all the Days for Account #{id}! {ex.ToString()}");
+      }
+    }
+
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(int id)
     {
@@ -58,12 +73,14 @@ namespace MealPlanner.WebApi.Controllers
       try
       {
         // Day for an account already exists?
+        /*
         IList<DayModel> existingDayForAccount =
           this._unitOfWork.Day._db
             .Where(m => m.Date.Equals(model.Date) && m.AccountId.Equals(model.AccountId))
             .ToList();
         if (existingDayForAccount != null && existingDayForAccount.Count > 0)
           return base.BadRequest("Day for the account already exists!");
+        */
 
         // Add to database
         await this._unitOfWork.Day.InsertAsync(model);

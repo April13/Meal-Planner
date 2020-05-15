@@ -5,20 +5,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace MealPlanner.ObjectModels.Models
 {
   /// <summary>
-  /// Represents the _Food_ model (a food item of an accounter/user)
+  /// Represents the _Nutrient_ model (a nutrient on nutrition facts label)
   /// </summary>
-  public class FoodModel : IValidatableObject, IModel
+  public class NutrientTypeModel : IValidatableObject, IModel
   {
     public int Id { get; set; }
-
-    public int AccountId { get; set; }
-
     public string Name { get; set; }
-
-    public NutritionModel Nutrition { get; set; }
+    public int UnitId { get; set; }
 
     /// <summary>
-    /// Represents the _Food_ `Validate` method
+    /// Represents the _NutrientType_ `Validate` method
     /// </summary>
     /// <param name="validationContext"></param>
     /// <returns></returns>
