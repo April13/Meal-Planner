@@ -35,7 +35,7 @@ namespace MealPlanner.WebApi.Controllers
       }
     }
 
-    [HttpGet("user/{id}")]
+    [HttpGet("account/{id}")]
     public IActionResult GetByAccountId(int id)
     {
       try

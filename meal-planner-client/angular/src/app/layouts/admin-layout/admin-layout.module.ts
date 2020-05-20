@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
@@ -13,16 +12,15 @@ import { IconsComponent }           from '../../pages/icons/icons.component';
 import { NotificationsComponent }   from '../../pages/notifications/notifications.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RecipeComponent } from 'app/modules/meal-planner/recipe/recipe.component';
-import { GroceryListComponent } from 'app/modules/meal-planner/grocery-list/grocery-list.component';
-import { CalendarComponent } from 'app/modules/meal-planner/calendar/calendar.component';
+import { RecipeComponent } from 'app/components/meal-planner/recipe/recipe.component';
+import { GroceryListComponent } from 'app/components/meal-planner/grocery-list/grocery-list.component';
+import { CalendarComponent } from 'app/components/meal-planner/calendar/calendar.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
-    FormsModule,
-    NgbModule
+    NgbModule,
   ],
   declarations: [
     DashboardComponent,
@@ -33,7 +31,7 @@ import { CalendarComponent } from 'app/modules/meal-planner/calendar/calendar.co
     NotificationsComponent,
     RecipeComponent,
     GroceryListComponent,
-    CalendarComponent,
+    CalendarComponent
   ]
 })
 

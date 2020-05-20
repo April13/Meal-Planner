@@ -6,9 +6,9 @@ import { TableComponent } from '../../pages/table/table.component';
 import { TypographyComponent } from '../../pages/typography/typography.component';
 import { IconsComponent } from '../../pages/icons/icons.component';
 import { NotificationsComponent } from '../../pages/notifications/notifications.component';
-import { GroceryListComponent } from 'app/modules/meal-planner/grocery-list/grocery-list.component';
-import { RecipeComponent } from 'app/modules/meal-planner/recipe/recipe.component';
-import { CalendarComponent } from 'app/modules/meal-planner/calendar/calendar.component';
+import { GroceryListComponent } from 'app/components/meal-planner/grocery-list/grocery-list.component';
+import { RecipeComponent } from 'app/components/meal-planner/recipe/recipe.component';
+import { CalendarComponent } from 'app/components/meal-planner/calendar/calendar.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },

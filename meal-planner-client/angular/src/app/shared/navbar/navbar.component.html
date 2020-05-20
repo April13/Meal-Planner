@@ -1,6 +1,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
   <div class="container-fluid">
+
+    <!-- Title and Sidebar functions -->
     <div class="navbar-wrapper">
       <div class="navbar-toggle">
         <button type="button" class="navbar-toggler" (click)="sidebarToggle()">
@@ -11,13 +13,17 @@
       </div>
       <a class="navbar-brand" href="javascript:void(0)">{{getTitle()}}</a>
     </div>
+
     <button class="navbar-toggler" type="button" (click)="collapse()"
       [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
       <span class="navbar-toggler-bar navbar-kebab"></span>
       <span class="navbar-toggler-bar navbar-kebab"></span>
       <span class="navbar-toggler-bar navbar-kebab"></span>
     </button>
+
+   
     <div class="collapse navbar-collapse justify-content-end" id="collapseExample" [ngbCollapse]="isCollapsed">
+      
       <form>
         <div class="input-group no-border">
           <input type="text" value="" class="form-control" placeholder="Search...">
@@ -28,7 +34,9 @@
           </div>
         </div>
       </form>
+
       <ul class="navbar-nav">
+        <!-- Search (Magnifying Glass) -->
         <li class="nav-item">
           <a class="nav-link btn-magnify" href="javascript:void(0)">
             <i class="nc-icon nc-layout-11"></i>
@@ -37,7 +45,7 @@
             </p>
           </a>
         </li>
-
+        <!-- Notification (Bell) -->
         <li class="nav-item btn-rotate" ngbDropdown placement="bottom-left">
           <a class="nav-link" ngbDropdownToggle id="navbarDropdownMenuLink" >
             <i class="nc-icon nc-bell-55"></i>
@@ -51,6 +59,7 @@
             <a ngbDropdownItem href="javascript:void(0)">Something else here</a>
           </div>
         </li>
+        <!-- Settings (Gear Wheel) -->
         <li class="nav-item">
           <a class="nav-link btn-rotate" href="javascript:void(0)">
             <i class="nc-icon nc-settings-gear-65"></i>
@@ -59,7 +68,13 @@
             </p>
           </a>
         </li>
+
+        <li>
+          <button type="button" class="btn btn-primary btn-sm" (click)="logout()">Logout</button>
+        </li>
+        
       </ul>
     </div>
+
   </div>
 </nav>

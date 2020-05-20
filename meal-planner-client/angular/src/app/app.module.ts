@@ -13,24 +13,41 @@ import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { AccountService } from './services/account/account.service';
+import { AuthenticationService } from './services/account/authentication.service';
+
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { LoginComponent } from './components/account/login/login.component';
+import { RegisterComponent } from './components/account/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes,{
-      useHash: true
+      // useHash: true
     }),
+    RouterModule,
     SidebarModule,
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
-    FixedPluginModule
+    FixedPluginModule,
+    HttpClientModule,
+
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    AccountService,
+    AuthenticationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -95,7 +95,8 @@ namespace MealPlanner.DataContext
         new NutrientTypeModel() { Id = 1032, Name = "Manganese",        UnitId = 1002 },
         new NutrientTypeModel() { Id = 1033, Name = "Chromium",         UnitId = 1007 },
         new NutrientTypeModel() { Id = 1034, Name = "Molybdenum",       UnitId = 1007 },
-        new NutrientTypeModel() { Id = 1035, Name = "Chloride",         UnitId = 1002 }
+        new NutrientTypeModel() { Id = 1035, Name = "Chloride",         UnitId = 1002 },
+        new NutrientTypeModel() { Id = 1036, Name = "Potassium",        UnitId = 1002 }
       });
     }
   }

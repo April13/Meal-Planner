@@ -65,6 +65,7 @@ namespace MealPlanner.WebApi
           MyAllowSpecificOrigins,
           builder => {
             builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            // builder.WithOrigins("http://localhost:4200/").SetIsOriginAllowed((host) => true).AllowAnyMethod().AllowAnyHeader();
           });
       });
 
