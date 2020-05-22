@@ -3,9 +3,11 @@
 ## Meal Planner API
 
 ## Meal Planner Angular Client
-Template by [Creative Tim][creative_tim].
+Layout is based off of template by [Creative Tim][creative_tim].
+Account Login and Registeration are based off of [Jason Watmore's User Registration and Login Example & Tutorial] [Jason].
 
 [creative_tim]: https://www.creative-tim.com/product/paper-dashboard-angular#
+[jason]: https://jasonwatmore.com/post/2019/06/10/angular-8-user-registration-and-login-example-tutorial
 
 ## License
 The project is made available under the terms of the [MIT License][license_mit].
