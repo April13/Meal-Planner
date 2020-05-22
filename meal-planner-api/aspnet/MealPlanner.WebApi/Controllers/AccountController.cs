@@ -47,7 +47,7 @@ namespace MealPlanner.WebApi.Controllers
         IEnumerable<AccountModel> accounts = await this._unitOfWork.Account.SelectAsync();
         AccountModel account = accounts.FirstOrDefault( m => m.Email.Equals(model.Email, StringComparison.OrdinalIgnoreCase) && m.Password.Equals(model.Password) );
         if (account == null)
-          return base.NotFound("Incorrect login or Account doesn't exist!");
+          return base.NotFound("Incorrect Login or Account doesn't exist!");
 
         return base.Ok(account);
       }
@@ -85,7 +85,7 @@ namespace MealPlanner.WebApi.Controllers
             .Where(m => m.Email.Equals(model.Email))
             .ToList();
         if (existingEmailForAccount != null && existingEmailForAccount.Count > 0)
-          return base.BadRequest("Email for the account already exists!");
+          return base.BadRequest("Email is already being used for an existing account!");
         
 
         // Add to database

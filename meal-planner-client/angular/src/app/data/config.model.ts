@@ -11,9 +11,10 @@ import { Link } from './link.model';
 export interface Config {
   api: {
     account: string;
-    booking: string;
-    lodging: string;
-    monitoring: string;
+    day: string;
+    food: string;
+    nutrientType: string;
+    unit: string;
   };
   navigation: {
     footer: Link[];

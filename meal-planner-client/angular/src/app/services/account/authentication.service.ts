@@ -18,7 +18,7 @@ export class AuthenticationService {
   }
 
   public get currentAccountValue(): Account {
-      return this.currentAccountSubject.value;
+    return this.currentAccountSubject.value;
   }
 
   login(email: string, password: string) {

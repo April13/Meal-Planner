@@ -4,7 +4,7 @@
     "account": "https://localhost:5001/api/Account",
     "day":  "https://localhost:5001/api/Day",
     "food":  "https://localhost:5001/api/Food",
-    "nutrient-type":  "https://localhost:5001/api/NutrientType",
+    "nutrientType":  "https://localhost:5001/api/NutrientType",
     "unit": "https://localhost:5001/api/Unit"
   },
   "navigation": {

@@ -14,10 +14,7 @@ export class AdminLayoutComponent implements OnInit {
   currentAccountSubscription: Subscription;
   accounts: Account[] = [];
 
-  constructor(
-    private authenticationService: AuthenticationService
-  ) 
-  {
+  constructor(private authenticationService: AuthenticationService) {
     this.currentAccountSubscription = this.authenticationService.currentAccount.subscribe(account => {
       this.currentAccount = account;
     });

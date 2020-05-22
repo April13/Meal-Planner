@@ -13,13 +13,15 @@ import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AccountService } from './services/account/account.service';
 import { AuthenticationService } from './services/account/authentication.service';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/account/login/login.component';
 import { RegisterComponent } from './components/account/register/register.component';
+import { AlertComponent } from './shared/alert/alert.component';
+import { ErrorInterceptor } from './services/error.interceptor';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { RegisterComponent } from './components/account/register/register.compon
     AdminLayoutComponent,
     LoginComponent,
     RegisterComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -40,13 +43,13 @@ import { RegisterComponent } from './components/account/register/register.compon
     FooterModule,
     FixedPluginModule,
     HttpClientModule,
-
     ReactiveFormsModule,
     FormsModule
   ],
   providers: [
     AccountService,
-    AuthenticationService
+    AuthenticationService,
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

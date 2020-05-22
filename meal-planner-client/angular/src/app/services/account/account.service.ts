@@ -42,15 +42,15 @@ export class AccountService {
     return this.apiUrl$.pipe(concatMap((url) => this.http.get<Account[]>(url, options)));
   }
   /**
-   * Represents the _Account Service_ `get` method
+   * Represents the _Account Service_ `verify` method
    *
-   * @param id string
+   * @param email string
+   * @param password string
    */
   verify(email: string, password: string): Observable<Account> {
     // const options = { params: new HttpParams().set('verify', email + '/' + password,) };
     // return this.apiUrl$.pipe(concatMap((url) => this.http.get<Account>(url, options)));
     return this.apiUrl$.pipe( concatMap( (url) => this.http.get<Account>(url + '/verify/' + email + '/' + password) ));
-    // return this.http.get<Account>('https://localhost:5001/api/Account/verify/' + email + '/' + password);
   }
 
   /**
